@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>神影</title>
+		<style type="text/css">
+			/* 初始化 */
+			body {
+				margin: 0px;
+				padding: 0px;
+				background: radial-gradient(circle at top,#444,#000);
+				height: 100vh;
+			}
+			.flex {
+				display: flex;
+			}
+			.flex1 {
+				flex: 1;
+			}
+			.baise {
+				background-color: #fff;
+			}
+			.column {
+				flex-direction: column;
+			}
+			.yinying {
+			    box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+			        rgb(0 0 0 / 14%) 0px 1px 1px 0px,
+			        rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+			}
+			.mg8{
+				margin: 8px;
+			}
+			.daohang {
+				padding: 10px 20px;
+				border-bottom: #999 solid 1px;
+				font-size: 14px;
+				color: #666;
+				text-align: center;
+				
+			}
+			.daohang:hover {
+				background-color: #eee;
+				font-size: 16px;
+				color: #000;
+			}
+			
+		
+			/* 内容区 */
+			.container {
+				margin: auto;
+			}
+			/* 3D轮播图样式 */
+			.content {
+				position: relative;
+				perspective: 1600px;
+				top:60px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.content_one {
+				width: 300px;
+				height: 150px;
+				/* 该属性设置在父级元素中，它的子级元素具有 3d 效果 */
+				transform-style: preserve-3d;
+				animation: content 15s infinite cubic-bezier(0.7,0,.17,1);
+			}
+			.content_one div {
+				position: absolute;
+				background-size: cover;
+				/* 设置div不透明属性 */
+				opacity: .9;
+				width: 350px;
+				height: 180px;
+				transform: rotateY(calc(var(--i)*120deg)) translateZ(550px);
+			}
+			.content_one1 {
+				background-image: url(img3/1.gif);
+			}
+			.content_one2 {
+				background-image: url(img3/2.gif);
+			}
+			.content_one3 {
+				background-image: url(img3/3.gif);
+			}
+			@keyframes content{
+				0%{
+					transform: translateZ(-100px) rotateY(0);
+				}
+				33%{
+					transform: translateZ(-100px) rotateY(-120deg);
+				}
+				66%{
+					transform: translateZ(-100px) rotateY(-240deg);
+				}
+				100%{
+					transform: translateZ(-100px) rotateY(-360deg);
+				}
+			}
+			
+			/* 酷炫轮播图 */
+			.content_2 {
+				margin-top: 25px;
+				/* margin-left: 200px; */
+				display: flex;
+				height: 800px;
+				justify-content: center;
+				align-items: center;
+				/* width: 1200px; */
+			}
+			.content_2_container{
+				width: 1000px;
+				display: flex;
+				justify-content: space-evenly;
+				overflow: hidden;
+			}
+			.content_2_big-box {
+				width: 650px;
+				height: 500px;
+				background-size: cover;
+				transition: 0.4s;
+			}
+			.content_2_small-box {
+				width: 200px;
+				height: 500px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.content_2_small-box img {
+				position: relative;
+				width: 200px;
+				height: 90px;
+				right: 0;
+				transition: 0.5s;
+			}
+			.content_2_small-box .img img {
+				right: 0;
+				transition: 0.5s;
+			}
+			.content_2_small-box .img.active {
+				opacity: 0;
+				right: 250px;
+			}
+			.content_2_small-box .img:hover img {
+				opacity: 0;
+				right: 250px;
+			}
+			
+			/* 尾部样式 */
+			.weibu {
+				height: 200px;
+				margin: 8px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.weibu img{
+				height: 200px;
+			}
+			
+			/* @media (max-width:900px) {
+				.Cebian {
+					display: none;
+				}
+			} */
+			
+		</style>
+	</head>
+	<body class="flex">
+		<!-- 侧边栏 -->
+		<div style="width: 200px;background: radial-gradient(circle at top,#444,#000);" class="Cebian baise yinying">
+			<!-- 头像栏 -->
+			<div class="flex" style="align-items: center;justify-content: center;border-bottom: 1px solid #666;">
+				<img src="img/1.jpg" style="height: 40px;width: 40px;padding: 10px;">
+				<div style="color: #fff;">李均然</div>
+			</div>
+			<!-- 导航栏 -->
+			<div class="flex1">
+				<div class="daohang"><a style="text-decoration: none;color: #666;" href="index.html">首页</a></div>
+				<div class="daohang"><a style="text-decoration: none;color: #666;" href="pages1.html">pages1</a></div>
+				<div class="daohang"><a style="text-decoration: none;color: #666;" href="pages2.html">pages2</a></div>
+				<div class="daohang">待定</div>
+			</div>
+		</div>
+		<!-- 内容区 -->
+			<div class="container">
+				<!-- 3D轮播图 -->
+				<div class="content">
+					<div class="content_one">
+						<div class="content_one1" style="--i:0"></div>
+						<div class="content_one2" style="--i:1"></div>
+						<div class="content_one3" style="--i:2"></div>
+					</div>
+				</div>
+				<!-- 酷炫轮播图 -->
+				<div class="content_2">
+					<!-- 轮播图大盒子 -->
+					<div class="content_2_container">
+						<div class="content_2_big-box"></div>
+						<div class="content_2_small-box">
+							<div class="img"><img src="img3/1.gif" ></div>
+							<div class="img"><img src="img3/2.gif" ></div>
+							<div class="img"><img src="img3/3.gif" ></div>
+							<div class="img"><img src="img3/4.gif" ></div>
+							<div class="img"><img src="img3/5.gif" ></div>
+						</div>
+					</div>
+				</div>
+				<!-- 尾部 -->
+				<div class="weibu">
+					<!-- 图 -->
+					<div style="margin-right: 30px;">
+						<img src="img/1.jpg" style="height: 180px;">
+					</div>
+					<!-- 字 -->
+					<div>
+						<p><label><h2>制作人：李均然</h2></label></p>
+						<p><label><h2>计算机2113</h2></label></p>
+						<p><label><h2>素材来源于网上</h2></label></p>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				// 获取需要操作的元素
+				// 获取左边大图的元素
+				let big_box = document.querySelector(".content_2_big-box")
+				// 图片集合
+				let imgs = document.getElementsByClassName("img")
+				// 定时器
+				let timer=null
+				// 当前图片下标
+				let index = 0
+				
+				// 设置一个重置函数
+				 function reset(){
+					for(let i = 0;i < imgs.length; i++){
+						imgs[i].className = "img";
+					}
+				}
+				// 设置一个选中函数
+				function selected(){
+					reset()
+					imgs[index].className="img active";
+				}
+				// 设置轮播图的时间函数
+				function play(){
+					timer = setInterval(function(){
+						selected();
+						index++
+						big_box.style.backgroundImage = "url('img3/"+[index]+".gif')"
+						if(index == 5){
+							index = 0
+						}
+					},1500);
+				}
+				// 循坏绑定每个小图片的鼠标移动事件
+				for(let i = 0;i < imgs.length;i++){
+					// 鼠标移动到当前小图片上时触发
+					imgs[i].onmousemove = function(){
+						// 鼠标移动到当前小图片时右边大图片编程当前的小图片
+						big_box.style.backgroundImage = "url('img3/"+[i + 1]+".gif')"
+						// 鼠标移动到小图片上面时关闭定时器并重置定时
+						// 鼠标移开后再继续执行
+						reset();
+						clearInterval(timer);
+						index = i + 1;
+						if(index == 5){
+							index = 0;
+						}
+						play()
+					}
+				}
+				
+			</script>
+	</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>神影</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			
+			/* 初始化 */
+			body{
+				margin: 0px;
+				padding: 0px;
+				background-color: #eee;
+				height: 100vh;
+			}
+			/* * {
+				border: #000 1px solid;
+			} */
+			.flex {
+				display: flex;
+			}
+			.flex1{
+				flex:1;
+			}
+			.baise {
+				background-color: #fff;
+			}
+			.yinying {
+			    box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+			        rgb(0 0 0 / 14%) 0px 1px 1px 0px,
+			        rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+			}
+			.column{
+				flex-direction: column;
+			}
+			.mg8{
+				margin: 8px;
+			}
+			.mgl8{
+				margin-left: 8px;
+			}
+			.mgt8{
+				margin-top: 8px;
+			}
+			.daohang {
+				padding: 10px 20px;
+				border-bottom: #999 solid 1px;
+				font-size: 14px;
+				color: #666;
+				text-align: center;
+				
+			}
+			.daohang:hover {
+				background-color: #eee;
+				font-size: 16px;
+				color: #000;
+			}
+			
+			/* 图文并排 */
+			#tuwen {
+				align-items: center;
+				justify-content: center;
+			}
+			.tu {
+				text-align: center;
+			}
+			.text p{
+				font-size: 15px;
+			}
+			
+			/* 表单 */
+			#bd {
+				background-image: url(img/keji.gif);
+				color: #ffffff;
+				background-position: right;
+			}
+			#biaodan p{
+				text-align: center;
+			}
+			#biaodan p input{
+				margin: 5px;
+			}
+			
+			/* 尾部 */
+			#weibu {
+				background-image: url(img/wei.gif);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				color: #fff;
+			}
+
+			/* @media (max-width:900px) {
+				.Neiro {
+					background: radial-gradient(circle at top,#444,#000);
+				}
+				.Cebian {
+					display: none;
+				}
+			} */
+		</style>
+	</head>
+	<body class="flex">
+		<!-- 侧边栏 -->
+		<div style="width: 200px;" class="Cebian baise yinying">
+			<!-- 头像栏 -->
+			<div class="flex" style="align-items: center;justify-content: center;border-bottom: 1px #666 solid;">
+				<img src="img/1.jpg" style="
+					height: 40px;
+					width: 40px;
+					padding: 10px;
+					">
+					<div>李均然</div>
+			</div>
+			<!-- 导航栏 -->
+			<div class="flex1">
+				<div class="daohang"><a style="text-decoration: none;color: #666;" href="index.html">首页</a></div>
+				<div class="daohang"><a style="text-decoration: none;color: #666;" href="pages1.html">pages1</a></div>
+				<div class="daohang"><a style="text-decoration: none;color: #666;" href="pages2.html">pages2</a></div>
+				<div class="daohang">待定</div>
+			</div>
+		</div>
+		<!-- 主区域 -->
+		<div class="flex1 column">
+			<!-- 头部栏 -->
+			<div style="height: 160px;" class="baise yinying" id="toubu">
+				<img src="img/5.jpeg" style="height: 160px;width: 100%;">
+			</div>
+			<!-- 内容区 -->
+			<div class="flex Neiro">
+				<!-- 左区 -->
+				<div style="flex:3">
+					<!-- 数据区 -->
+					<div class="flex shuJuQu">
+						<!-- 数据块 -->
+						<div style="height: 120px;" class="flex1 mg8 baise yinying" >
+							<img src="img/tx%20(1).jpeg" style="height: 120px;width: 100%;">
+						</div>
+						<!-- 数据块 -->
+						<div style="height: 120px;" class="flex1 mg8 baise yinying" >
+							<img src="img/tx%20(2).jpeg" style="height: 120px;width: 100%;">
+						</div>
+						<!-- 数据块 -->
+						<div style="height: 120px;" class="flex1 mg8 baise yinying" >
+							<img src="img/tx%20(3).jpeg" style="height: 120px;width: 100%;">
+						</div>
+						<!-- 数据块 -->
+						<div style="height: 120px;" class="flex1 mg8 baise yinying" >
+							<img src="img/tx%20(4).jpeg" style="height: 120px;width: 100%;">
+						</div>
+					</div>
+					<!-- 列表区 -->
+					<div class="column">
+						<!-- 列表 -->
+						<div style="height: 250px;overflow: hidden;" class="flex baise mg8 yinying" id="tuwen">
+							<!-- 图片 -->
+							<div class="tu" style="margin-right: 15px;">
+								<img src="img/dage.gif" style="height: 180px;">
+							</div>
+							<!-- 文字 -->
+							<div class="text" style="width: 300px;">
+								<label><h3>《鬼灭之刃》炎柱炼狱杏寿郎。</h3>
+
+<p>炎柱被称为“大哥”，除了本身的战斗力强大外，更重要的因为是他与众不同的人格魅力他成熟稳重，乐观善良，无时不刻不关怀后辈，用生命延续着鬼杀队的信念，炎柱是永远的大哥，只要他在，安全感十足，炎柱履行的九柱的职责，保护所有人，奋斗到最后一刻。</p></label>
+							</div>
+						</div>
+						<div style="height: 300px;" class="baise mg8 yinying">
+							<!-- 表单 -->
+							<div class="flex" style="justify-content: center;" id="bd">
+								<!-- 图 -->
+								<div style="margin-right: 20px;">
+									<img src="img/fenzhu.gif" style="height: 300px;">
+								</div>
+								<!-- 文 -->
+								<div id="biaodan">
+									<h2 style="text-align: center;">鬼灭之刃</h2>
+									<p><label>账号：</label><input type="text" name="" id="" value="" /></p>
+									<p><label>密码：<input type="password" name="" id="" value="" /></label></p>
+									<p style="padding-right: 14px;"><label>验证码：<input type="text" name="" id="" value="" /></label></p>
+									<p><input type="submit" name="" id="" value="登录" /><input style="margin-left: 30px;" type="submit" name="" id="" value="注册" /></p>
+								</div>
+							</div>
+						</div>
+						<div style="height: 200px;justify-content: center;" class="baise mg8 yinying flex" id="weibu">
+							<div style="margin-right: 30px;border-radius: 110px;overflow: hidden;">
+								<img src="img/1.jpg" style="height: 200px;">
+							</div>
+							<div>
+								<p><label><h2>制作人：李均然</h2></label></p>
+								<p><label><h2>计算机2113</h2></label></p>
+								<p><label><h2>素材来源于网上</h2></label></p>
+							</div>
+						</div>
+						<!-- <div style="height: 200px;" class="baise mg8 yinying"></div> -->
+					</div>
+				</div>
+				<!-- 右区 -->
+				<div style="flex:1" class="YouQu column flex baise mgl8 mgt8 yinying">
+					<!-- 图片循环区 -->
+					<div style="height: 800px;width: 300px;" id="xh"></div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script src="jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		let img_xh = new Array()
+		let img1 = new Image();
+		img1.src = "img/xh1.jpeg"
+		img1.height = "600"
+		let img2 = new Image();
+		img2.src = "img/xh2.jpeg"
+		img2.height = "600"
+		img_xh[0] = img1;
+		img_xh[1] = img2;
+		
+		$("#xh").append(img1);
+		
+		function left(){
+			$("#tu img").remove();
+			$("#tu").append(img_xh[1]);
+		}
+		function right(){
+			$("#tu img").remove();
+			$("#tu").append(img_xh[0]);
+		}
+		
+		xh=0;
+		window.setInterval(function(){
+			if (xh==2) {xh=0}
+			$("#xh img").remove();
+			$("#xh").append(img_xh[xh]);
+			xh++;
+		},1000)
+	</script>
+</html>

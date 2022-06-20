@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>神影</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				/* 背景径向渐变 */
+				background: radial-gradient(circle at top,#444,#000);
+				
+				display: flex;
+				height: 100vh;
+				justify-content: center;
+				align-items: center;
+			}
+			.container {
+				width: 1000px;
+				display: flex;
+				justify-content: space-evenly;
+				overflow: hidden;
+				/* border:  1px solid red; */
+				/* -webkit-box-reflect: below; 13px linear-gradient
+				(transparent 70%,rgba(0,0,0,0.2)) */
+			}
+			.big-box {
+				width: 650px;
+				height: 500px;
+				background-size: cover;
+				transition: 0.4s;
+			}
+			.small-box {
+				width: 200px;
+				height: 500px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.small-box img {
+				position: relative;
+				width: 200px;
+				height: 90px;
+				right: 0;
+				transition: 0.5s;
+			}
+			
+			.small-box .img img{
+				/* width: 100%; */
+				/* height: 100%; */
+				/* object-fit: cover; */
+				/* position: absolute; */
+				right: 0;
+				transition: 0.5s;
+			}
+			.small-box .img.active{
+				opacity: 0;
+				right: 250px;
+			}
+			.small-box .img:hover img{
+				opacity: 0;
+				right: 250px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="big-box"></div>
+				<div class="small-box">
+					<div class="img"><img src="img3/1.gif" ></div>
+					<div class="img"><img src="img3/2.gif" ></div>
+					<div class="img"><img src="img3/3.gif" ></div>
+					<div class="img"><img src="img3/4.gif" ></div>
+					<div class="img"><img src="img3/5.gif" ></div>
+				</div>
+			</div>
+		
+		<script type="text/javascript">
+			// 获取需要操作的元素
+			// 获取左边大图的元素
+			let big_box = document.querySelector(".big-box")
+			// 图片集合
+			let imgs = document.getElementsByClassName("img")
+			// 定时器
+			let timer=null
+			// 当前图片下标
+			let index = 0
+			
+			// 设置一个重置函数
+			 function reset(){
+				for(let i = 0;i < imgs.length; i++){
+					imgs[i].className = "img";
+				}
+			}
+			// 设置一个选中函数
+			function selected(){
+				reset()
+				imgs[index].className="img active";
+			}
+			// 设置轮播图的时间函数
+			function play(){
+				timer = setInterval(function(){
+					selected();
+					index++
+					big_box.style.backgroundImage = "url('img3/"+[index]+".gif')"
+					if(index == 5){
+						index = 0
+					}
+				},2000);
+			}
+			// 循坏绑定每个小图片的鼠标移动事件
+			for(let i = 0;i < imgs.length;i++){
+				// 鼠标移动到当前小图片上时触发
+				imgs[i].onmousemove = function(){
+					// 鼠标移动到当前小图片时右边大图片编程当前的小图片
+					big_box.style.backgroundImage = "url('img3/"+[i + 1]+".gif')"
+					// 鼠标移动到小图片上面时关闭定时器并重置定时
+					// 鼠标移开后再继续执行
+					reset();
+					clearInterval(timer);
+					index = i + 1;
+					if(index == 5){
+						index = 0;
+					}
+					play()
+				}
+			}
+			
+		</script>
+	</body>
+</html>
