@@ -1,236 +1,203 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>神影</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<style type="text/css">
-			
-			/* 初始化 */
-			body{
-				margin: 0px;
-				padding: 0px;
-				background-color: #eee;
-				height: 100vh;
-			}
-			/* * {
-				border: #000 1px solid;
-			} */
-			.flex {
-				display: flex;
-			}
-			.flex1{
-				flex:1;
-			}
-			.baise {
-				background-color: #fff;
-			}
-			.yinying {
-			    box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
-			        rgb(0 0 0 / 14%) 0px 1px 1px 0px,
-			        rgb(0 0 0 / 12%) 0px 1px 3px 0px;
-			}
-			.column{
-				flex-direction: column;
-			}
-			.mg8{
-				margin: 8px;
-			}
-			.mgl8{
-				margin-left: 8px;
-			}
-			.mgt8{
-				margin-top: 8px;
-			}
-			.daohang {
-				padding: 10px 20px;
-				border-bottom: #999 solid 1px;
-				font-size: 14px;
-				color: #666;
-				text-align: center;
-				
-			}
-			.daohang:hover {
-				background-color: #eee;
-				font-size: 16px;
-				color: #000;
-			}
-			
-			/* 图文并排 */
-			#tuwen {
-				align-items: center;
-				justify-content: center;
-			}
-			.tu {
-				text-align: center;
-			}
-			.text p{
-				font-size: 15px;
-			}
-			
-			/* 表单 */
-			#bd {
-				background-image: url(img/keji.gif);
-				color: #ffffff;
-				background-position: right;
-			}
-			#biaodan p{
-				text-align: center;
-			}
-			#biaodan p input{
-				margin: 5px;
-			}
-			
-			/* 尾部 */
-			#weibu {
-				background-image: url(img/wei.gif);
-				background-repeat: no-repeat;
-				background-size: 100% 100%;
-				color: #fff;
-			}
+  <head>
+    <meta charset="utf-8">
+    <title>广西制福增材制造有限公司</title>
+    <style type="text/css">
+      /* 初始化 */
+      body {
+        margin: 0px;
+        padding: 0px;
+        background-color: #eee;
+        height: 100vh;
+      }
 
-			/* @media (max-width:900px) {
-				.Neiro {
-					background: radial-gradient(circle at top,#444,#000);
-				}
-				.Cebian {
-					display: none;
-				}
-			} */
-		</style>
-	</head>
-	<body class="flex">
-		<!-- 侧边栏 -->
-		<div style="width: 200px;" class="Cebian baise yinying">
-			<!-- 头像栏 -->
-			<div class="flex" style="align-items: center;justify-content: center;border-bottom: 1px #666 solid;">
-				<img src="img/1.jpg" style="
-					height: 40px;
-					width: 40px;
-					padding: 10px;
-					">
-					<div>李均然</div>
-			</div>
-			<!-- 导航栏 -->
-			<div class="flex1">
-				<div class="daohang"><a style="text-decoration: none;color: #666;" href="index.html">首页</a></div>
-				<div class="daohang"><a style="text-decoration: none;color: #666;" href="pages1.html">pages1</a></div>
-				<div class="daohang"><a style="text-decoration: none;color: #666;" href="pages2.html">pages2</a></div>
-				<div class="daohang">待定</div>
-			</div>
-		</div>
-		<!-- 主区域 -->
-		<div class="flex1 column">
-			<!-- 头部栏 -->
-			<div style="height: 160px;" class="baise yinying" id="toubu">
-				<img src="img/5.jpeg" style="height: 160px;width: 100%;">
-			</div>
-			<!-- 内容区 -->
-			<div class="flex Neiro">
-				<!-- 左区 -->
-				<div style="flex:3">
-					<!-- 数据区 -->
-					<div class="flex shuJuQu">
-						<!-- 数据块 -->
-						<div style="height: 120px;" class="flex1 mg8 baise yinying" >
-							<img src="img/tx%20(1).jpeg" style="height: 120px;width: 100%;">
-						</div>
-						<!-- 数据块 -->
-						<div style="height: 120px;" class="flex1 mg8 baise yinying" >
-							<img src="img/tx%20(2).jpeg" style="height: 120px;width: 100%;">
-						</div>
-						<!-- 数据块 -->
-						<div style="height: 120px;" class="flex1 mg8 baise yinying" >
-							<img src="img/tx%20(3).jpeg" style="height: 120px;width: 100%;">
-						</div>
-						<!-- 数据块 -->
-						<div style="height: 120px;" class="flex1 mg8 baise yinying" >
-							<img src="img/tx%20(4).jpeg" style="height: 120px;width: 100%;">
-						</div>
-					</div>
-					<!-- 列表区 -->
-					<div class="column">
-						<!-- 列表 -->
-						<div style="height: 250px;overflow: hidden;" class="flex baise mg8 yinying" id="tuwen">
-							<!-- 图片 -->
-							<div class="tu" style="margin-right: 15px;">
-								<img src="img/dage.gif" style="height: 180px;">
-							</div>
-							<!-- 文字 -->
-							<div class="text" style="width: 300px;">
-								<label><h3>《鬼灭之刃》炎柱炼狱杏寿郎。</h3>
+      /* * {
+        border: #000 1px solid;
+      } */
 
-<p>炎柱被称为“大哥”，除了本身的战斗力强大外，更重要的因为是他与众不同的人格魅力他成熟稳重，乐观善良，无时不刻不关怀后辈，用生命延续着鬼杀队的信念，炎柱是永远的大哥，只要他在，安全感十足，炎柱履行的九柱的职责，保护所有人，奋斗到最后一刻。</p></label>
-							</div>
-						</div>
-						<div style="height: 300px;" class="baise mg8 yinying">
-							<!-- 表单 -->
-							<div class="flex" style="justify-content: center;" id="bd">
-								<!-- 图 -->
-								<div style="margin-right: 20px;">
-									<img src="img/fenzhu.gif" style="height: 300px;">
-								</div>
-								<!-- 文 -->
-								<div id="biaodan">
-									<h2 style="text-align: center;">鬼灭之刃</h2>
-									<p><label>账号：</label><input type="text" name="" id="" value="" /></p>
-									<p><label>密码：<input type="password" name="" id="" value="" /></label></p>
-									<p style="padding-right: 14px;"><label>验证码：<input type="text" name="" id="" value="" /></label></p>
-									<p><input type="submit" name="" id="" value="登录" /><input style="margin-left: 30px;" type="submit" name="" id="" value="注册" /></p>
-								</div>
-							</div>
-						</div>
-						<div style="height: 200px;justify-content: center;" class="baise mg8 yinying flex" id="weibu">
-							<div style="margin-right: 30px;border-radius: 110px;overflow: hidden;">
-								<img src="img/1.jpg" style="height: 200px;">
-							</div>
-							<div>
-								<p><label><h2>制作人：李均然</h2></label></p>
-								<p><label><h2>计算机2113</h2></label></p>
-								<p><label><h2>素材来源于网上</h2></label></p>
-							</div>
-						</div>
-						<!-- <div style="height: 200px;" class="baise mg8 yinying"></div> -->
-					</div>
-				</div>
-				<!-- 右区 -->
-				<div style="flex:1" class="YouQu column flex baise mgl8 mgt8 yinying">
-					<!-- 图片循环区 -->
-					<div style="height: 800px;width: 300px;" id="xh"></div>
-				</div>
-			</div>
-		</div>
-		
-	</body>
-	<script src="jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-		let img_xh = new Array()
-		let img1 = new Image();
-		img1.src = "img/xh1.jpeg"
-		img1.height = "600"
-		let img2 = new Image();
-		img2.src = "img/xh2.jpeg"
-		img2.height = "600"
-		img_xh[0] = img1;
-		img_xh[1] = img2;
-		
-		$("#xh").append(img1);
-		
-		function left(){
-			$("#tu img").remove();
-			$("#tu").append(img_xh[1]);
-		}
-		function right(){
-			$("#tu img").remove();
-			$("#tu").append(img_xh[0]);
-		}
-		
-		xh=0;
-		window.setInterval(function(){
-			if (xh==2) {xh=0}
-			$("#xh img").remove();
-			$("#xh").append(img_xh[xh]);
-			xh++;
-		},1000)
-	</script>
+      .flex {
+        display: flex;
+        border-radius: 10px;
+      }
+
+      .flex1 {
+        flex: 1;
+      }
+
+      .baise {
+        background-color: #fff;
+      }
+
+      .yinying {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px,
+          rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }
+
+      .column {
+        flex-direction: column;
+      }
+
+      .mg8 {
+        margin: 8px;
+      }
+
+      .mgl8 {
+        margin-left: 8px;
+      }
+
+      .mgt8 {
+        margin-top: 8px;
+      }
+
+      .dh {
+        justify-content: center;
+        background-color: #fff;
+      }
+
+      .daohang {
+        padding: 20px 35px;
+        border-bottom: #999 solid 1px;
+        font-size: 20px;
+        color: #666;
+        text-align: center;
+      }
+
+      .daohang:hover {
+        background-color: #eee;
+        font-size: 22px;
+        color: #000;
+      }
+
+      .daohang1 {
+        padding: 20px 40px;
+        border-bottom: #999 solid 1px;
+        font-size: 20px;
+        color: #666;
+        text-align: center;
+
+      }
+
+      .daohang1:hover {
+        background-color: #eee;
+        font-size: 22px;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 大框架盒子 -->
+    <div>
+      <!-- 头部 -->
+      <div class="img1" style="
+        height: 350px;
+        background-image: url(imgluo/3.jpg);
+        background-size: 100%;
+        ">
+        <div class="flex" style="height: 100px;padding: 130px 0px 0px 300px;">
+          <div style="margin-right: 30px;"><img style="height: 130px;" src="imgluo/log1.jpg" alt=""></div>
+          <div>
+            <h1>广西诚纳招标有限公司</h1>
+            <h3>Guangxi Chengna Tendering Co., Ltd</h3>
+          </div>
+        </div>
+      </div>
+      <!-- 头部导航栏 -->
+      <div class="flex dh">
+        <div class="daohang"><a style="text-decoration: none;color: #666;" href="">首页</a></div>
+        <div class="daohang"><a style="text-decoration: none;color: #666;" href="">公司概况</a></div>
+        <div class="daohang"><a style="text-decoration: none;color: #666;" href="">公司动态</a></div>
+        <div class="daohang"><a style="text-decoration: none;color: #666;" href="">业务领域</a></div>
+        <div class="daohang"><a style="text-decoration: none;color: #666;" href="">项目公告公示</a></div>
+        <div class="daohang"><a style="text-decoration: none;color: #666;" href="">政策法规</a></div>
+        <div class="daohang"><a style="text-decoration: none;color: #666;" href="">公司文化</a></div>
+        <div class="daohang"><a style="text-decoration: none;color: #666;" href="">人力资源</a></div>
+        <div class="daohang"><a style="text-decoration: none;color: #666;" href="">联系我们</a></div>
+      </div>
+      <!-- 中部背景 -->
+      <div style="
+        height: 200px;
+        background-image: url(imgluo/4.jpg);
+         background-size: 100%;
+      ">
+        <div style="padding: 50px 0px 0px 300px;">
+          <h1>服务&nbsp&nbsp公正&nbsp&nbsp权威&nbsp&nbsp效率</h1>
+        </div>
+        <div style="padding-left: 270px;">
+          <h3>Service fairness, authority and efficiency</h3>
+        </div>
+      </div>
+      <!-- 底部 -->
+      <div class="flex">
+        <!-- 底部侧边栏 -->
+        <div style="width: 200px;" class="Cebian baise yinying">
+          <!-- 头像栏 -->
+          <div class="flex" style="align-items: center;justify-content: center;border-bottom: 1px #666 solid;">
+            <img src="imgluo/log1.jpg" alt="" style="
+              height: 100px;
+              width: 180px;
+              padding: 10px;
+            ">
+          </div>
+          <!-- 导航栏 -->
+          <div class="flex1">
+            <div class="daohang1"><a style="text-decoration: none;color: #666;" href="">公司概况</a></div>
+            <div class="daohang1"><a style="text-decoration: none;color: #666;" href="">公司简介</a></div>
+            <div class="daohang1"><a style="text-decoration: none;color: #666;" href="">领导致辞</a></div>
+            <div class="daohang1"><a style="text-decoration: none;color: #666;" href="">管理团队</a></div>
+            <div class="daohang1"><a style="text-decoration: none;color: #666;" href="">组织机构</a></div>
+            <div class="daohang1"><a style="text-decoration: none;color: #666;" href="">公司资质</a></div>
+            <div class="daohang1"><a style="text-decoration: none;color: #666;" href="">公司荣誉</a></div>
+            <div class="daohang1"><a style="text-decoration: none;color: #666;" href="">公司大事记</a></div>
+          </div>
+        </div>
+        <!-- 底部内容栏主区域 -->
+        <div class="flex1">
+          <!-- 列表区 -->
+          <div class="column">
+            <h1 style="text-align: center;color: #000;">广西诚纳招标有限公司</h1>
+            <!-- 列表 -->
+            <div style="height: 600px;overflow: hidden;" class="column baise mg8 yinying">
+              <p style="padding: 20px 35px 20px 35px;font-size: 25px;text-align: left;">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp广西诚纳招标有限公司创建于2019年8月，注册资本金6660万元人民币。公司实行现代企业管理制度，业务涉及设备、工程和服务招标三大领域，具有较强的专业化运营能力。
+              </p>
+              <div>
+                <p style="padding: 20px 35px 20px 35px;font-size: 25px;text-align: left;">
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp公司拥有建设部、财政部、商务部和国家发改委等部委颁发的各类招标甲级资质和进出口经营权,率先通过了ISO9001质量体系认证,雄厚的实力可以.为客户提供包括招标代理、工程咨询、项目管理、造价咨询、工程监理、国际贸易等全方位专业化服务,业务范围涵盖到政府、军队、航天、兵器、有色金属、能源、交通等社会各行各业。
+                </p>
+              </div>
+              <div style="text-align: center;"><img style="height: 250px;" src="imgluo/log.jpg" alt=""></div>
+            </div>
+
+            <div style="height: 750px;overflow: hidden;" class="column baise mg8 yinying" id="tuwen">
+              <p style="padding: 20px 35px 20px 35px;font-size: 25px;text-align: left;">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp公司拥有覆盖全国的经营网络和服务团队，在全国拥有多家参、控股公司，将逐步在省会城市构建遍布全国的分散式业务和集中管理的经营服务模式。公司大学本科以上学历人员占公司员工总数的v98%，其中专业技术人员占员工总数的77%,专业人才分布于土建、工业制造、能源、咨询造价、冶炼、农田水利、工程技术等领域。
+              </p>
+              <div>
+                <p style="padding: 20px 35px 20px 35px;font-size: 25px;text-align: left;">
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp经过几年的发展，公司的专家库已经汇集了5000多名具有丰富实践经验和较高理论水平的评审专家,涉及80多个行业、200多个专业，全面而强大的专家队伍为保障招标项目的质量和评标过程中的公正性提供了权威的技术支撑。
+                </p>
+                <div style="text-align: center;"><img style="height: 400px;" src="imgluo/5.jpg" alt=""></div>
+              </div>
+            </div>
+
+            <div style="height: 750px;overflow: hidden;" class="column baise mg8 yinying" id="tuwen">
+              <p style="padding: 20px 35px 20px 35px;font-size: 25px;text-align: left;">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp公司具有先进的网络办公系统，其中招标业务管理系统、网上流程审批系统和OA办公管理系统,为各分支机构的远程移动办公提供了有力保障。公司拥有自己的办公场所,总部办公面积近3000多平方米，设有6个专用的开评标会议室。
+              </p>
+              <div>
+                <p style="padding: 20px 35px 20px 35px;font-size: 25px;text-align: left;">
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp新华招标公司积极倡导和维护公开、公平、公正与诚实信用原则，在维护国家利益、社会公共利益和招投标当事人的利益方面做出了卓越贡献。公司经过近几年稳健的发展,得到社会各界的充分信任与肯定，作为综合性招标代理机构,公司已经实现了向多元化经营模式转变，并已经向深度和广度发展。
+                </p>
+              </div>
+              <div style="text-align: center;">
+                <img style="height: 400px" src="imgluo/6.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
